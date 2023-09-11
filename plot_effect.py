@@ -64,7 +64,7 @@ textfontsize = 10
 fig = plt.figure(figsize=set_size(347, h_fraction=0.7))
 
 plt.ylabel("Amplitude", fontsize=textfontsize)
-plt.xlabel("Frequency $f$", fontsize=textfontsize)
+plt.xlabel("Frequency $\\nu$", fontsize=textfontsize)
 
 plt.ylim([0,2.5])
 plt.xlim([0,4])
@@ -92,7 +92,7 @@ U = import_unitary("4_qubit_target_unitary.pt")
 # Outputs from original unitary
 output_svs_U = run_unitary(U, testfreqs, num_qubits, sp_qubits)
 exp_values_U = exp_value(output_svs_U, qubits=meas_qubits, num_qubits=num_qubits)
-plt.plot(testfreqs, np.real(exp_values_U.detach().numpy()), label="Original function $W_U(f)$")
+plt.plot(testfreqs, np.real(exp_values_U.detach().numpy()), label="Original function $W_U(\\nu)$")
 
 def plot_learned_function(directory, selector="highest", measurement="mae", cidx=0, label=None):
     linestyle = "solid" if selector=="lowest" else "dashed"
@@ -113,8 +113,8 @@ plot_learned_function("experiment_not_entangled/ld_opr", selector="highest", cid
 plot_learned_function("experiment_not_entangled/li_ortho", selector="highest", cidx=3)
 
 # Outputs with lowest mae
-plot_learned_function("experiment_not_entangled/ld_opr", selector="lowest", cidx=1, label="$W_{V_S}(f)$ (\\texttt{LD_NONORTHO})")
-plot_learned_function("experiment_not_entangled/li_ortho", selector="lowest", cidx=3, label="$W_{V_S}(f)$ (\\texttt{LI_ORTHO})")
+plot_learned_function("experiment_not_entangled/ld_opr", selector="lowest", cidx=1, label="$W_{V_S}(\\nu)$ (\\texttt{LD_NONORTHO})")
+plot_learned_function("experiment_not_entangled/li_ortho", selector="lowest", cidx=3, label="$W_{V_S}(\\nu)$ (\\texttt{LI_ORTHO})")
 
 plt.legend()
 

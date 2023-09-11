@@ -63,7 +63,7 @@ def plot_risk_and_mse(fname):
     risk_bound_li_ortho = 1 - (r**2 * t + d)/(d*(d+1))
     risk_bound_ld_opr = 1 - (r**2 + d)/(d*(d+1))
 
-    fig = plt.figure(figsize=set_size(347, h_fraction=0.7))
+    fig = plt.figure(figsize=set_size(347, h_fraction=0.5))
     subpl = fig.subplots(1, 2, sharey=True)
 
     x = [0,10,20,30,40,50]
