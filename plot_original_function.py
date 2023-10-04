@@ -64,7 +64,7 @@ textfontsize = 10
 fig = plt.figure(figsize=set_size(347/2, h_fraction=0.8))
 subpl = [None, fig.subplots(1, 1)]
 
-subpl[1].set_ylabel("Amplitude ratio", fontsize=textfontsize)
+subpl[1].set_ylabel("Displacement ratio", fontsize=textfontsize)
 subpl[1].set_xlabel("Frequency $\\nu$ (Hz)", fontsize=textfontsize)
 
 

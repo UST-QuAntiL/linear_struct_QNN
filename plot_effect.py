@@ -63,7 +63,7 @@ textfontsize = 10
 
 fig = plt.figure(figsize=set_size(347, h_fraction=0.7))
 
-plt.ylabel("Amplitude", fontsize=textfontsize)
+plt.ylabel("Displacement ratio", fontsize=textfontsize)
 plt.xlabel("Frequency $\\nu$", fontsize=textfontsize)
 
 plt.ylim([0,2.5])

@@ -64,7 +64,8 @@ def plot_risk_and_mse(fname):
     risk_bound_ld_opr = 1 - (r**2 + d)/(d*(d+1))
 
     fig = plt.figure(figsize=set_size(347, h_fraction=0.5))
-    subpl = fig.subplots(1, 2, sharey=True)
+    subpl = fig.subplots(1, 2, sharey=False)
+    plt.subplots_adjust(wspace=0.4, left=0.1, right=0.9, top=0.9, bottom=0.1)
 
     x = [0,10,20,30,40,50]
     labels = ['', '\\texttt{MAX\\_ENT}', '\\texttt{LI\\_NONORTHO}', '\\texttt{LD\\_NONORTHO}', '\\texttt{LI\\_ORTHO} ', '']
@@ -125,7 +126,6 @@ def plot_risk_and_mse(fname):
     subpl[1].hlines(y = risk_bound_li_ortho, xmin = 37, xmax = 43, linewidth=1.5, linestyle='dotted')
 
     fig.legend(loc='lower left', bbox_to_anchor=(0.12, 0.87), ncol=2)
-
 
     fig.savefig(fname, format='pdf', bbox_inches='tight')
 
