@@ -5,7 +5,7 @@ This repository contains the implementations, raw experiment results and plots f
 
 ## Experiments
 
-The experiments are parameterized by the settings in ``exp_setup.py``. They train QNNs to approximate the unitary given in ``4_qubit_target_unitary.pt``. The experiment save the trainined hypothesis unitary $V_S$ in their respective directories for further processing. The experiments are executed using the following files.
+The experiments are parameterized by the settings in ``exp_setup.py``. They train QNNs to approximate the unitary given in ``4_qubit_target_unitary.pt``. The experiments save the trained hypothesis unitary $V_S$ in their respective directories for further processing. The experiments are executed using the following files.
 
  - ``exp_entangled.py``: Training QNNs using maximally entangled training states (``MAX_ENT``). The results are saved in ``experiment_entangled/``.
  - ``exp_not_entangled_ld_opr.py``: Training QNNs using Schmidt rank 0 states that are linearly dependent and pairwise nonorthogonal (``LD_NONORTHO``). The results are saved in ``experiment_not_entangled/ld_opr/``
@@ -14,10 +14,10 @@ The experiments are parameterized by the settings in ``exp_setup.py``. They trai
 
 ## Plots
 
-The trained hypothesis unitaries are further processed by extraing the exact risk and the mean squared error of the classical function results. The data extraction is performed using ``data_extraction.py``. It also supports additional metrics (restricted risk and mean absolute error). The plots are created using the following files.
+The trained hypothesis unitaries are further processed by extracting the exact risk and the mean squared error of the classical function results. The data extraction is performed using ``data_extraction.py``. It also supports additional metrics (restricted risk and mean absolute error). The plots are created using the following files.
 
  - ``plots.py``: Main plot for comparing risk and mean squared error.
- - ``plot_original_function.py``: Plot the classical praditions of ``4_qubit_target_unitary.pt``
+ - ``plot_original_function.py``: Plot the classical predictions of ``4_qubit_target_unitary.pt``
  - ``plot_effect.py``: Plots the classical predictions of high and low risk unitaries for ``LD_NONORTHO`` and ``LI_ORTHO``.
 
 ## Dependencies
